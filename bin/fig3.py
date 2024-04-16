@@ -3,7 +3,7 @@
 import numpy as np
 from matplotlib.pyplot import colorbar, show, subplots
 
-results = np.loadtxt("data.dat")
+results = np.loadtxt("results/data.dat")
 
 fig, ax = subplots()
 image = ax.imshow(results, vmin=-3, vmax=3, extent=(-1, 1, -1, 1))
@@ -16,4 +16,6 @@ cbar.ax.set_yticklabels(
 ax.set_xlabel(r'$\operatorname{Re}(z_0)$')
 ax.set_ylabel(r'$\operatorname{Im}(z_0)$')
 
-show()
+fig.savefig('results/fig3.pdf')
+
+#show()

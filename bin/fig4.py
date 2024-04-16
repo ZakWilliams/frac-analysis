@@ -15,4 +15,7 @@ nice_province_counts = nice_data.groupby('Province').count()['crop id']
 
 plt.ylabel('% of respondents described as "nice"')
 plt.tight_layout()
-plt.show()
+
+plt.savefig('results/survey.pdf')
+
+#plt.show()
